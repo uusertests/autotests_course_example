@@ -2,7 +2,7 @@
 # названия диска и корневую папку
 
 # Зададим абсолютный путь до файла
-file_path = '/test/user/test/filename.txt'
+file_path = 'C:/test/user/test/filename.txt'
 
 # Получим только название файла
 file_name = file_path.split('/')[-1]
@@ -12,3 +12,15 @@ file_name_without_ext = file_name.split('.')[0]
 
 # Выведем результат
 print('Название файла без расширения:', file_name_without_ext)
+
+# Получим только название диска, обрежем ':'
+disk_name = file_path.split('/')[0][:1]
+
+# Выведем результат
+print('Название диска:', disk_name)
+
+# Получим название корневой паки
+folder_name = file_path.split('/')[1]
+
+# Выведем результат
+print('Название диска:', folder_name)

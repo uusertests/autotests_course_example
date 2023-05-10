@@ -10,8 +10,10 @@ first_string = 'wtf'
 second_string = 'brick quz jmpy veldt whangs fox'
 
 # Найдем срез минимальной длины, содержащий все символы из первой строки
-result = second_string[min(second_string.index(char) for char in first_string):
-                       max(second_string.index(char) for char in first_string) + 1]
+result = second_string[
+         min(second_string.index(char) for char in first_string):
+         max(second_string.index(char) for char in first_string) + 1
+         ]
 
 # Выведем результат на экран
 print('Первая строка:', first_string)
