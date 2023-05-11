@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55c99e6d-34e8-4200-af4e-966f741703b6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Homework2/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework2/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Homework2/task7.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework2/task7.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2.py" beforeDir="false" afterPath="$PROJECT_DIR$/task2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task3.py" beforeDir="false" afterPath="$PROJECT_DIR$/task3.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +149,7 @@
       <option name="presentableId" value="Default" />
       <updated>1683218602451</updated>
       <workItem from="1683218603568" duration="1638000" />
-      <workItem from="1683649630241" duration="353000" />
+      <workItem from="1683649630241" duration="1711000" />
     </task>
     <servers />
   </component>
