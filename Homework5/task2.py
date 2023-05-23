@@ -12,7 +12,7 @@ def repeats(our_str):
         # Считаем количество предшествующих вхождений символа char в строке our_str и добавляем 1
         count = our_str[:i].count(char) + 1
         new_str += char + "_" + str(count)  # Добавляем в новую строку new_str
-    return new_str  # Возвращаем новую строку
+    return new_str  # Возвращаем эту строку
 
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
