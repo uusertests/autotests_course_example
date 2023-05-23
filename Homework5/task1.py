@@ -11,7 +11,7 @@ def letter_stat(our_str):
     for letter in our_str:  # Проходимся по каждой букве в строке our_str
         count = our_str.count(letter)  # Используем метод count для подсчета количества вхождений буквы в строку
         letters_dict[letter] = count  # Добавляем пару ключ-значение, где ключ-буква, значение-количество вхождений
-    return letters_dict  # Возвращаем словарь с результатами подсчета
+    return letters_dict  # Возвращаем этот словарь
 
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
