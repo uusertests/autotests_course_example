@@ -20,17 +20,15 @@ import unittest  # Не удалять
 # Здесь пишем код
 def treatment_sum(our_tuple):
     try:
-        if len(our_tuple) == 2:
-            if isinstance(our_tuple[0], str) and isinstance(our_tuple[1], str):
-                return our_tuple[0] + our_tuple[1]
-            else:
-                return sum(our_tuple)
-        elif len(our_tuple) < 2:
-            return 'Недостаточно данных'
-        else:
-            raise Exception('Много данных')
+        if len(our_tuple) > 2:
+            raise Exception
+        return our_tuple[0] + our_tuple[1]
+    except IndexError:
+        return 'Недостаточно данных'
     except TypeError:
         return 'Нельзя сложить эти данные'
+    except Exception:
+        raise Exception('Много данных')
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
 
