@@ -4,39 +4,36 @@
 # Нужно найти сумму трёх самых дорогих покупок, которые запишутся в переменную three_most_expensive_purchases
 
 # Здесь пишем код
-with open("test_file/task_3.txt", 'r') as file:
-    lines = file.read().splitlines()
+# Открываем файл для чтения
+with open('test_file/task_3.txt', 'r') as file:
+    lines = file.readlines()
 
-# Удаляем пустые строки
-lines = [line for line in lines if line.strip()]
+# Удаляем символы новой строки из каждой строки
+lines = [line.strip() for line in lines]
 
-# Преобразуем строки в целочисленные значения
-prices = []
-purchase = []
+purchases = []  # Список для хранения покупок
+current_purchase_total = 0  # Переменная для хранения суммы текущей покупки
+
+# Обрабатываем каждую строку
 for line in lines:
-    if line:
-        prices.append(int(line))
+    if line == '':
+        # Если встречаем пустую строку, значит текущая покупка закончилась
+        # Добавляем сумму текущей покупки в список покупок
+        if current_purchase_total > 0:
+            purchases.append(current_purchase_total)
+            current_purchase_total = 0  # Обнуляем сумму для следующей группы
     else:
-        if purchase:
-            # Сортируем покупки внутри блока
-            purchase.sort(reverse=True)
-            # Добавляем три самые дорогие покупки в список цен
-            prices.extend(purchase[:3])
-            purchase = []
-    # Проверяем, что в блоке только одна покупка
-    if line and not purchase:
-        purchase.append(int(line))
+        # Преобразуем строку с ценой в число и добавляем к текущей покупке
+        current_purchase_total += float(line)
 
-# Если файл закончился без пустой строки, добавляем покупки из последнего блока
-if purchase:
-    purchase.sort(reverse=True)
-    prices.extend(purchase[:3])
+# Добавляем последнюю покупку в список покупок, если она есть
+if current_purchase_total > 0:
+    purchases.append(current_purchase_total)
 
-# Сортируем все цены по убыванию
-prices.sort(reverse=True)
+# Сортируем список покупок по убыванию суммы
+purchases.sort(reverse=True)
 
-# Находим сумму трех самых дорогих покупок
-three_most_expensive_purchases = sum(prices[:3])
-print("Сумма трех самых дорогих покупок:", three_most_expensive_purchases)
+# Суммируем три самых дорогих покупки
+three_most_expensive_purchases = sum(purchases[:3])
 
 assert three_most_expensive_purchases == 202346
